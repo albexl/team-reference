@@ -1,0 +1,153 @@
+\documentclass[letter]{amsart}
+\usepackage[pdftex]{geometry}
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{courier}
+\usepackage{fancyhdr}
+
+\lstset{language=C++}
+\lstset{columns=fullflexible}
+\lstset{basicstyle=\scriptsize\ttfamily}
+\lstset{showspaces=false}
+
+\geometry{landscape}
+\setlength{\topmargin}{-0.25in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\columnsep}{1in}
+\setlength{\columnseprule}{0.2pt}
+\textwidth 9.5in
+
+\pagestyle{fancy}
+\lhead{ Universidad de la Habana: UH++ }
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\newcommand{\includecpp}[3]{
+  \begin{multicols}{2}
+    [\subsection{#1}\ ]
+    \lstinputlisting[language=c++]{#2/#3}
+  \end{multicols}
+}
+
+\newcommand{\includejava}[3]{
+  \begin{multicols}{2}
+    [\subsection{#1}\ ]
+    \lstinputlisting[language=Java]{#2/#3}
+  \end{multicols}
+}
+
+\newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\stirlingsecond}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+
+\begin{document}
+  \thispagestyle{fancy}
+  \begin{center}
+    \Huge\textsc{Team Reference Extended\\ Universidad de la Habana : UH++ }
+  \end{center}
+  
+  \begin{center}
+    \textbf{ ACM-ICPC Caribbean Finals 2016 }\\
+    \textbf{Team Members:} Marcelo Jos\'e Fornet Forn\'es, Ariel Cruz Cruz, Eloy P\'erez Torres\\
+    \textbf{Developed by:} Jos\'e Carlos Guti\'errez P\'erez
+  \end{center}  
+
+  \begin{multicols}{2}
+    \tableofcontents
+  \end{multicols}
+
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Data Structures }
+     \includecpp {Segment Tree Beat}{./data_structures}{_segment_tree_beats.cpp}
+     \includecpp {Union Find}{./data_structures}{_union_find.cpp}
+
+
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Geometry }
+     \includecpp {Contain Point}{./geometry}{_contains.cpp}
+     \includecpp {Minimal Circle}{./geometry}{_minimal_circle.cpp}
+     \includecpp {Semiplane Intersection}{./geometry}{_semiplane_intersection.cpp}
+     \includecpp {Kd-Tree}{./geometry}{_kdtree.cpp}
+    
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Graph }
+     \includecpp {Minimum Arborescence}{./graph}{_arborescence.cpp}
+     \includecpp {Minimum Arborescence (Chu-Liu/Edmonds)}{./graph}{_arborescence2.cpp}
+     \includecpp {Articulation Points}{./graph}{_articulation_points.cpp}
+     \includecpp {Bridges}{./graph}{_bridges.cpp}
+     \includecpp {Centroid Decomposition}{./graph}{_centroid_decomposition.cpp}
+     \includecpp {Is Graphic}{./graph}{_is_graphic.cpp}
+     \includecpp {Offline LCA}{./graph}{_offline_lca.cpp}
+    
+  
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Java }
+     \includejava {Cheat Sheet}{./java}{_java_cheat_sheet.java}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Math }
+     \includecpp {Assignment}{./math}{_assignment.cpp}
+     \includecpp {Bitmatrix}{./math}{_bitmatrix.cpp}
+     \includecpp {Integrate}{./math}{_integrate.cpp}
+     \includecpp {Polynomial}{./math}{_polynomial_int.cpp}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Misc }
+     \includecpp {Cheat Sheet}{./misc}{_cheat_sheet.cpp}
+     \includecpp {Linear Inverse}{./misc}{_linear_inverse.cpp}
+     \includecpp {8 Queens}{./misc}{_8-queens.cpp}
+     \includecpp {15-Puzzle}{./misc}{_15puzzle.cpp}
+     \includecpp {Hanoi Towers}{./misc}{_hanoi_towers.cpp}
+     \includecpp {Magic Odd Square}{./misc}{_magic_odd_square.cpp}
+     \includecpp {Stack}{./misc}{_stack.cpp}
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ Number Theory }
+     \includecpp {Carmichael Lambda}{./number_theory}{_carmichael_lambda.cpp}
+     \includecpp {Farey}{./number_theory}{_farey.cpp}
+     \includecpp {Pollard Brent}{./number_theory}{_pollard-brent.cpp}
+    
+  
+
+  \enlargethispage*{\baselineskip}
+  \pagebreak
+
+  \section{ String }
+     \includecpp {Linear Suffix Array}{./string}{_suffix_array3.cpp}
+     \includecpp {Aho-Corasick}{./string}{_aho-corasick.cpp}
+     \includecpp {Palindromic Tree}{./string}{_palindromic_tree.cpp}
+     
+    
+  
+\end{document}
