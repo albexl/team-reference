@@ -1,2 +1,2 @@
 # team-reference
-Team reference used for competitive programming competitions
+Team reference used by my team for competitive programming contests.
